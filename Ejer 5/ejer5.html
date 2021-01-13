@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<title>Condicionales y bucles</title>
+	</head>
+	<body>
+		<script>
+		
+		// CONDICIONALES (Lo mismo de siempre)
+		/*
+		Lo tipico en cuanto a operandos:
+			> menor que
+			< mayor que
+			== igual que
+			!= distinto
+		    === igual y mismo tipo
+			etc etc
+		*/
+		
+			var edad = prompt("Dime edad: ");
+			if(edad >=18){
+				document.write("Eres mayor de edad");
+			}else if(edad > 10){
+				document.write("Eres un chaval");
+			}else{
+				document.write("Eres un niño");
+			}
+			
+			// Bucle for
+			document.write("<br/>");
+			for(i=0; i<10; i++){
+			    document.write("<br/>");
+				document.write("Valor For : " + i);
+			}
+			
+			document.write("<br/>");
+			
+			// WHILE y DO WHILE
+			var j = 0;
+			while(j<10){
+				document.write("<br/>");
+				document.write("Valor While: " + j++);
+			}
+			
+			document.write("<br/>");
+			
+			var l=0;
+			do{
+			l++;
+			}while(l<10);
+			document.write("<br/>");
+		    document.write("Valor do While: " + l);
+			
+			// FOREACH
+			personas = ["Pepe", "Manuel", "Jose"];
+			personas.forEach(persona => document.write("<br/>Nombre: " + persona));
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Variables</title>
+		<link rel="stylesheet" type="text/css" href="./estilos.css" media="screen">
+	</head>
+	<body>
+		<script>
+			// Asigno valor a variable y la imprimo. prompt pide datos al usuario
+			// var nombre = "Carlos";
+			var nombre, edad;
+			nombre=prompt("Ingresa tu nombre: ");
+			edad=prompt("Ingresa tu edad: ");
+			
+			//Podemos construir el html para imprimir el resultado y aplicarle estilos desde un archivo css
+			document.write("<div> El nombre es: <u>" +nombre+ "</u> y la edad <b> " + edad + "</b></div>");
+			
+			console.log("Nombre: " + nombre +". Este texto solo se puede ver en la consola");
+		</script>
+	</body>
+</html>

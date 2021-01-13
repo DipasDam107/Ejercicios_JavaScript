@@ -1,0 +1,1 @@
+alert("Primera sentencia Javascript externa");

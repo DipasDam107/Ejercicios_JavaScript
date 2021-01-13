@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Document Object Model</title>
+		<link rel="stylesheet" type="text/css" href="./estilos.css" media="screen">
+	</head>
+
+	<body>
+		<h1 id="titulo">Titulo del sitio web</h1>
+		<div id="subtitulo"></div>
+		<p>1. -Lorem ipsum <b>dolor</b> sit amet, consectetur adipiscing elit. Nullam condimentum ut tortor non sodales. Curabitur ut mauris dapibus, dignissim purus vulputate, efficitur orci.</p>
+		<p id="segundo">2. -Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum ut tortor non sodales. Curabitur ut mauris dapibus, dignissim purus vulputate, efficitur orci.</p>
+		<p>3. -Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum ut tortor non sodales. Curabitur ut mauris dapibus, dignissim purus vulputate, efficitur orci.</p>
+		
+		<ol id="lista">
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>onsectetur adipiscing elit</li>	
+		</ol>
+		
+		<script>
+			//Coge los elementos por su etiqueta. Esto almacena las etiquetas que encuentre en una colección html
+			var parrafos = document.getElementsByTagName("p");
+			document.write("Primer Parrafo : " + parrafos[0].innerHTML);
+			parrafos[0].innerHTML = "He cambiado el valor del parrafo";
+			
+			//En vez de coger todos los elementos de una etiqueta, podemos coger una id específica
+			var segundoParrafo = document.getElementById("segundo");
+			segundoParrafo.innerHTML = "Hola <u> que tal?</u>";
+			
+			//Javascript nos permite ir añadiendo nodos en tiempo de ejecución a nuestra página. pasos:
+			// 1 - Crear el elementos
+			var elemento = document.createElement("h2");
+			
+			// 2 - Crear un nodo de texto
+			var texto = document.createTextNode("Titulo dinámico");
+			
+			// 3 - Añadir el nodo de texto al elemento creado al principio
+			elemento.appendChild(texto);
+			
+			// 4 - Agregar atributos, pares clave valor
+			elemento.setAttribute("align", "center");
+			elemento.setAttribute("class", "titularSecundario");
+			
+			// 5 - Agregar el elemento al documento
+			document.getElementById("subtitulo").appendChild(elemento);
+			
+			
+			//Ejemplo con lista ordenada
+
+			var linea = document.createElement("li"), contenido = document.createTextNode("Nuevo Texto");
+			linea.appendChild(contenido);
+			
+			//var padre = document.getElementById("lista");
+			//Esta linea pone el li al final 
+			//padre.appendChild(linea);
+			//podemos acceder al padre de otra manera, por ejemplo cuando no tiene id. ParentNode obtiene el nodo padre del que estamos tratando
+			var padre = document.getElementsByTagName("li")[0].parentNode, hijo = document.getElementsByTagName("li")[0];
+			//padre.appendChild(linea);
+			//InsertBefore nos permite introducir un elemento antes de otro
+			padre.insertBefore(linea, hijo);
+			
+			
+			
+			//Podemos reempleazar elementos con replaceChild
+			var cuerpo = document.body, 
+			titulo = document.getElementById("titulo"), 
+			reemplazo=document.createElement("h1"),
+			textoReemplazo=document.createTextNode("Nuevo titulo");
+			
+			reemplazo.appendChild(textoReemplazo);
+			
+			//Reemplazo el titulo que ya esta, con otro elemento titulo distinto
+			cuerpo.replaceChild(reemplazo, titulo);
+			
+			
+			//Tambien podemos cargarnos un elemento con removeChild
+			var parrafoABorrar = document.getElementsByTagName("p")[2];
+			cuerpo.removeChild(parrafoABorrar);
+			
+		</script>
+	</body>
+</html>

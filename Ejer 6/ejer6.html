@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<title>Funciones</title>
+	</head>
+	<body>
+		<script>
+			
+			//Las funciones se declaran así
+			function funcion(nombre){
+				document.write("Hola " + nombre);
+				
+			};
+			
+			funcion(prompt("Dime nombre: "));
+			
+			
+			//Fijarme como no hay que indicar tipos al recibir parámetros y devolver. 
+			//Fijarme tambien como la función no deja de ser una variable al uso
+			
+			var sumar =  function(num1, num2){
+				return num1+num2;
+			}
+			
+			var numero1 = parseInt(prompt("Dime numero 1: "),10);
+			var numero2 = parseInt(prompt("Dime numero 2: "),10);
+			
+			document.write("<br/>El resultado es: " + sumar(numero1,numero2));
+			
+		</script>
+	</body>
+</html>

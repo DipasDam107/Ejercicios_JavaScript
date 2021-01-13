@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<title>Tipos de Datos</title>
+	</head>
+	<body>
+		<script>
+			//Numerico
+			var edad = 19; //Entero
+			var peso = 60.109; //Float
+			
+			//String
+			var nombre = "Carlos";
+			//Para poner comillas en el texto hay que "escaparlas" con \
+			var textoConComillas = "Esto es un texto \"con comillas\"";
+			document.write(textoConComillas);
+			document.write("<br/>");
+			
+			//Arrays
+			var personas = ["Carlos", "Daniel", "Marcos"];
+			
+			//Los arrays no estan restringidos a un tipo de dato, similar a python, pueden aceptar multiples tipos
+			var moldeable = ["Hola", 5, true];
+			
+			//Para imprimirlos es igual que siempre
+			document.write(moldeable[1]);
+			document.write("<br/>");
+			//Objetos
+			var objeto = {
+				color: "Negro",
+				size: 12
+			};
+			
+			//Booleanos
+			var bool = true;
+			var boolFalso = false;
+			
+			//Undefined - no tiene un tipo o valor asociado 
+			var noDefinida;
+			document.write(noDefinida);
+			document.write("<br/>");
+			//NaN - Valor invalido, indica al algun error en el tratamiento de datos
+			var texto = "Hola";
+			document.write(texto*2);
+			document.write("<br/>");
+		
+		</script>
+	</body>
+</html>

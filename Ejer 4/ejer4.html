@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<title>Arrays - Utilidades</title>
+	</head>
+	<body>
+		<script>
+			//Los espacios se generan dinamicamente según se vayan necesitando
+			var personas = ["Manuel", "Pepe", "Daniel"];
+			
+			//Se cambia el valor de cada posicion de la misma manera que siempre
+			personas[2] = "Raulito";
+			
+			//Numero de elementos del array
+			document.write(personas);	
+			document.write("<br/>");
+			document.write("Numero de elementos:" + personas.length);
+			document.write("<br/>");
+			
+			//Para añadir un elemento al final usamos length, y ya JS asocia el espacio
+			personas[personas.length] = "Nuevo Amigo";
+			document.write(personas);
+			document.write("<br/>");
+			document.write("Numero de elementos:" + personas.length);
+			document.write("<br/>");
+			
+			//Tambien podemos usar la función push
+			personas.push("Luis");
+			document.write(personas);
+			document.write("<br/>");
+			
+			// Se pueden añadir multiples elementos en la misma sentencia
+			personas.push("Manolo", "Roman", "Juanito");
+			document.write(personas);
+			document.write("<br/>");
+			
+			// Para eliminar el ultimo usamos la función pop
+			personas.pop();
+			document.write(personas);
+			document.write("<br/>");
+			
+			// Podemos concatenar dos arrays con concat
+			var personas2 = ["Batman", "Spiderman"];
+			var personas = personas.concat(personas2);
+			document.write(personas);
+			document.write("<br/>");
+			
+			// Join determina el separador del array, util para mostrarlo
+			document.write(personas.join(" - "));
+			document.write("<br/>");
+			
+			// Sort ordena el array
+			document.write(personas.sort());
+			document.write("<br/>");
+			
+			// Reverse los ordena al reves
+			document.write(personas.reverse());
+			document.write("<br/>");
+		</script>
+	</body>
+</html>

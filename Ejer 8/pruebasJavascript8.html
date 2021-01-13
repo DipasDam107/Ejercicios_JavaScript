@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Cadenas - Metodos y propiedades</title>
+	</head>
+
+	<body>
+		<script>
+			var texto = "Esto es una cadena de texto";
+			
+			// Longitud
+			document.write("Longitud: " + texto.length);
+			
+			// Substring: a partir de donde corta. Con substr podemos indicar el numero de caracteres a partir de la pos inicial
+			document.write("<br/>" + texto.substring(3));
+			document.write("<br/>" + texto.substr(3,4));
+			
+			// Posicion de una letra
+			var pos = texto.indexOf("o");
+			document.write("<br/>Posicion de o: " + pos);
+			//Podemos indicar desde que caracter empieza a buscar
+			document.write("<br/>Posicion de otra o: " + texto.indexOf("o", pos+1));
+			
+			//Ultima posicion
+			document.write("<br/>Última posicion de o: " + texto.lastIndexOf("o"));
+			
+			//Reemplazar texto
+			document.write("<br/>" + texto.replace("texto", "caracteres"));
+			
+			//Transformar a mayusculas y minusculas
+			document.write("<br/>" + texto.toUpperCase());
+			document.write("<br/>" + texto.toLowerCase());
+			
+		</script>
+	</body>
+</html>
