@@ -1,0 +1,48 @@
+.titularSecundario{
+	color:red;
+	font-weight: bold;
+}
+
+div{
+	width: 200px;
+	height: 200px;
+	background: #ddd;
+	display: inline-block;
+	margin-right: 10px;
+	border: 1px solid #aaa;
+	
+}
+
+.azul{
+	background: #0074D9;
+	border: 1px solid #000;
+}
+
+.rojo{
+	background: #FF4136;
+	border: 1px solid #000;
+}
+
+.bordeGrueso{
+	border: 10px solid black;
+	
+}
+
+.thumb{
+	width: 200px;
+	transition: 300ms all ease;
+}
+
+.grande{
+	width: 400px;
+}
+
+.titulo{
+	border: 1px solid navy;
+	background: #ccc;
+	padding: 10px;
+}
+
+.tituloGrande{
+	font-size:60px;
+}
