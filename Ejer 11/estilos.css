@@ -1,0 +1,14 @@
+.grande{
+	width:400px;
+	transition: 300ms all ease;
+}
+
+.thumb{
+	width: 200px;
+	
+}
+
+.grande, .thumb{
+	transition: 300ms all ease;
+}
+
