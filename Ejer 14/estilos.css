@@ -1,0 +1,12 @@
+
+div{
+	display: block;
+	margin-top: 10px;
+}
+
+.siFoco{
+	background: #f00;
+}
+.noFoco{
+	background: #fff;
+}
